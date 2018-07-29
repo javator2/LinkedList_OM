@@ -18,6 +18,7 @@ public class Main {
         lista.add(14);
         lista.add(15);
         lista.add(16);
-        LinkedList.printList();
+      // LinkedList.printList();
+        System.out.println(lista.get(5));
     }
 }

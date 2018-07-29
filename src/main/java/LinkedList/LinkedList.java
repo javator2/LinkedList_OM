@@ -9,6 +9,14 @@ public class LinkedList {
         head = new Node(data);
     }
 
+public void addTail (Object data){
+        Node copy = head;
+        while (copy.next != null) {
+            copy = copy.next;
+        }
+        copy.next = new Node(data);
+        size++;
+        }
 
     public void add(Object data){
         Node copy = head;
@@ -23,7 +31,18 @@ public class LinkedList {
             System.out.println(temp.data);
             temp = temp.next;
         }
+
     }
+    public static Object get(int index){
+        Node temp = head;
+        int i = 0;
+        while (i<index-1){
+            temp = temp.next;
+            i++;
+        }
+        return temp.data;
+    }
+
 
     class Node {
         private Object data;
